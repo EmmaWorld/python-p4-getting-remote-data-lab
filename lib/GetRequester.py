@@ -14,3 +14,8 @@ class GetRequester:
         people = self.get_response_body()
         data = json.loads(people)
         return data
+
+url = 'https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json'
+
+site = GetRequester(url)
+print(site.load_json())
